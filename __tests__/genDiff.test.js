@@ -21,13 +21,31 @@ const getFixtureContent = (fileName) => {
 };
 
 test('Empty JSON', () => {
-  const actualDifference = getFixturesDiff('empty_json_input1.json', 'empty_json_input2.json');
-  const expectedDifference = getFixtureContent('empty_json_result.txt');
+  const actualDifference = getFixturesDiff('empty_input1.json', 'empty_input2.json');
+  const expectedDifference = getFixtureContent('empty_result.txt');
   expect(actualDifference).toBe(expectedDifference);
 });
 
 test('Flat JSON', () => {
-  const actualDifference = getFixturesDiff('flat_json_input1.json', 'flat_json_input2.json');
-  const expectedDifference = getFixtureContent('flat_json_result.txt');
+  const actualDifference = getFixturesDiff('flat_input1.json', 'flat_input2.json');
+  const expectedDifference = getFixtureContent('flat_result.txt');
+  expect(actualDifference).toBe(expectedDifference);
+});
+
+test('Empty YAML', () => {
+  const actualDifference = getFixturesDiff('empty_input1.yaml', 'empty_input2.yaml');
+  const expectedDifference = getFixtureContent('empty_result.txt');
+  expect(actualDifference).toBe(expectedDifference);
+});
+
+test('Flat YAML', () => {
+  const actualDifference = getFixturesDiff('flat_input1.yaml', 'flat_input2.yaml');
+  const expectedDifference = getFixtureContent('flat_result.txt');
+  expect(actualDifference).toBe(expectedDifference);
+});
+
+test('Flat YML', () => {
+  const actualDifference = getFixturesDiff('flat_input1.yaml', 'flat_input2.yaml');
+  const expectedDifference = getFixtureContent('flat_result.txt');
   expect(actualDifference).toBe(expectedDifference);
 });

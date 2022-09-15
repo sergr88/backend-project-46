@@ -12,3 +12,5 @@
 # Asciinema
 ### Difference generation from flat JSON files:
 [![asciicast](https://asciinema.org/a/m9W1BCH78HCSafWw8iqKOYHYk.svg)](https://asciinema.org/a/m9W1BCH78HCSafWw8iqKOYHYk)
+### Difference generation from flat YAML files:
+[![asciicast](https://asciinema.org/a/mq9opq4ozpJsUyU1wmK0SFwTl.svg)](https://asciinema.org/a/mq9opq4ozpJsUyU1wmK0SFwTl)
