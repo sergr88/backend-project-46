@@ -26,9 +26,9 @@ test('Empty JSON', () => {
   expect(actualDifference).toBe(expectedDifference);
 });
 
-test('Flat JSON', () => {
-  const actualDifference = getFixturesDiff('flat_input1.json', 'flat_input2.json');
-  const expectedDifference = getFixtureContent('flat_result.txt');
+test('Hierarchical JSON', () => {
+  const actualDifference = getFixturesDiff('hierarchical_input1.json', 'hierarchical_input2.json');
+  const expectedDifference = getFixtureContent('hierarchical_result.txt');
   expect(actualDifference).toBe(expectedDifference);
 });
 
@@ -38,14 +38,14 @@ test('Empty YAML', () => {
   expect(actualDifference).toBe(expectedDifference);
 });
 
-test('Flat YAML', () => {
-  const actualDifference = getFixturesDiff('flat_input1.yaml', 'flat_input2.yaml');
-  const expectedDifference = getFixtureContent('flat_result.txt');
+test('Hierarchical YAML', () => {
+  const actualDifference = getFixturesDiff('hierarchical_input1.yaml', 'hierarchical_input2.yaml');
+  const expectedDifference = getFixtureContent('hierarchical_result.txt');
   expect(actualDifference).toBe(expectedDifference);
 });
 
-test('Flat YML', () => {
-  const actualDifference = getFixturesDiff('flat_input1.yaml', 'flat_input2.yaml');
-  const expectedDifference = getFixtureContent('flat_result.txt');
+test('Hierarchical YML', () => {
+  const actualDifference = getFixturesDiff('hierarchical_input1.yml', 'hierarchical_input2.yml');
+  const expectedDifference = getFixtureContent('hierarchical_result.txt');
   expect(actualDifference).toBe(expectedDifference);
 });
