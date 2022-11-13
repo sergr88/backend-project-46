@@ -55,3 +55,9 @@ test('Hierarchical JSON to plain', () => {
   const expectedDifference = getFixtureContent('hierarchical_plain.txt');
   expect(actualDifference).toBe(expectedDifference);
 });
+
+test('Hierarchical JSON to json', () => {
+  const actualDifference = getFixturesDiff('hierarchical_input1.json', 'hierarchical_input2.json', 'json');
+  const expectedDifference = getFixtureContent('hierarchical_json.txt');
+  expect(actualDifference).toBe(expectedDifference);
+});
