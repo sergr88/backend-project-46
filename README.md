@@ -20,6 +20,8 @@ Codeclimate:
 [![asciicast](https://asciinema.org/a/TBEhD1NttWfXLIXwnRV3pQwB0.svg)](https://asciinema.org/a/TBEhD1NttWfXLIXwnRV3pQwB0)
 - Сравнение иерархических YAML-файлов:
 [![asciicast](https://asciinema.org/a/I3iy46RhKSJWGSW3NYhFDD6h2.svg)](https://asciinema.org/a/I3iy46RhKSJWGSW3NYhFDD6h2)
+- Сравнение иерархических JSON-файлов с форматированием в plain:
+[![asciicast](https://asciinema.org/a/hNJVYG283FDBPxf5dxnMSHafh.svg)](https://asciinema.org/a/hNJVYG283FDBPxf5dxnMSHafh)
 
 ## Требования
 - Node.js 16 LTS
