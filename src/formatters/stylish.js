@@ -34,7 +34,7 @@ const stylish = (difference) => {
       });
   };
 
-  return [...iter(null, { root: difference }, 0, false), ''].join('\n');
+  return iter(null, { root: difference }, 0, false).join('\n');
 };
 
 export default stylish;

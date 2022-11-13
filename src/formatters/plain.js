@@ -43,7 +43,7 @@ const plain = (difference) => {
   };
 
   const lines = iter(null, { both: difference });
-  return [..._.compact(lines), ''].join('\n');
+  return _.compact(lines).join('\n');
 };
 
 export default plain;
