@@ -27,7 +27,8 @@ const stylish = (difference) => {
         }
 
         const isNoNestedPrefix = isNoPrefix || prefix.trim() !== '';
-        const lines = Object.keys(currentValue).sort().flatMap(
+        const nestedKeys = _.sortBy(Object.keys(currentValue));
+        const lines = nestedKeys.flatMap(
           (nestedKey) => iter(nestedKey, currentValue[nestedKey], level + 1, isNoNestedPrefix),
         );
         return [`${fullPrefix}{`, ...lines, `${fullIndent}}`];

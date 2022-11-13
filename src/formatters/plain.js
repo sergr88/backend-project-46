@@ -34,12 +34,11 @@ const plain = (difference) => {
 
     if (!_.isPlainObject(currentValue)) return '';
 
-    return Object.keys(currentValue)
-      .sort()
-      .flatMap((nestedKey) => {
-        const ancestralPath = propertyKey ? `${propertyKey}.` : '';
-        return iter(`${ancestralPath}${nestedKey}`, currentValue[nestedKey]);
-      });
+    const nestedKeys = _.sortBy(Object.keys(currentValue));
+    return nestedKeys.flatMap((nestedKey) => {
+      const ancestralPath = propertyKey ? `${propertyKey}.` : '';
+      return iter(`${ancestralPath}${nestedKey}`, currentValue[nestedKey]);
+    });
   };
 
   const lines = iter(null, { both: difference });
