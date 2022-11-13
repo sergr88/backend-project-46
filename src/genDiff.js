@@ -28,9 +28,9 @@ const getOneSideDifference = (rootKey, rootValue, comparableProperties, side) =>
 
     if (!_.isPlainObject(value)) return { [valueField]: value };
 
-    const transformedValue = _.transform(value, (acc, nestedValue, nestedKey) => {
-      const nestedValues = iter(getFullKey(key, nestedKey), nestedValue);
-      _.set(acc, nestedKey, nestedValues);
+    const transformedValue = Object.keys(value).reduce((acc, nestedKey) => {
+      const nestedValues = iter(getFullKey(key, nestedKey), value[nestedKey]);
+      return { ...acc, [nestedKey]: nestedValues };
     }, {});
     return key ? { [valueField]: transformedValue } : transformedValue;
   };
